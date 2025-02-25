@@ -1,0 +1,19 @@
+{
+	"article1": {
+		"article": {
+			"title": "This is a Nr. 1 article title",
+			"description": "This is a Nr. 1 article about",
+			"body": "This is a Nr. 1 article description",
+			"tagList": ["tag1", "tag2", "tag3"]
+		}
+	},
+
+	"article2": {
+		"article": {
+			"title": "This is a Nr. 2 article title",
+			"description": "This is a Nr. 2 article about",
+			"body": "This is a Nr. 2 article description",
+			"tagList": ["tag1", "tag2", "tag3"]
+		}
+	}
+}

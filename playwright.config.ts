@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
+require('dotenv').config();
+
 export default defineConfig({
 	testDir: './tests',
 	fullyParallel: false,
@@ -23,18 +25,6 @@ export default defineConfig({
 			name: 'chromium',
 			use: { ...devices['Desktop Chrome'], storageState: '.auth/user.json' },
 			dependencies: ['setup'],
-		},
-
-		{
-			name: 'firefox',
-			use: { ...devices['Desktop Firefox'], storageState: '.auth/user.json' },
-			dependencies: ['setup'],
-		},
-
-		{
-			name: 'webkit',
-			use: { ...devices['Desktop Safari'], storageState: '.auth/user.json' },
-			dependencies: ['setup'],
-		},
+		}
 	],
 });

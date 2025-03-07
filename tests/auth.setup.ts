@@ -2,15 +2,20 @@ import { test as setup } from '@playwright/test';
 import user from '../.auth/user.json';
 import fs from 'fs';
 
+require('dotenv').config();
+
 const authFile = '.auth/user.json';
 
 setup('Authenticate', async ({ request }) => {
 	// get access token using API
-	const loginResponse = await request.post('https://conduit-api.bondaracademy.com/api/users/login', {
+	const loginResponse = await request.post(`${process.env.API_URL}/api/users/login`, {
 		data: {
-			user: { email: 'veranika.rudzianok@gmail.com', password: 'Tester123@' },
+			user: { email: process.env.USER_EMAIL, password: process.env.USER_PASSWORD },
 		},
 	});
+	if (!loginResponse.ok()) {
+		console.error("Login failed:", await loginResponse.text());
+	}
 	const loginResponseBody = await loginResponse.json();
 	const accessToken = loginResponseBody.user.token;
 

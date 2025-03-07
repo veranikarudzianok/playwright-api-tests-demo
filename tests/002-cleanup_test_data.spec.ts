@@ -6,7 +6,7 @@ const hash = generateHash();
 
 test('Create an article', async ({ page }) => {
 	// open website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 
 	// publish an article
@@ -15,7 +15,7 @@ test('Create an article', async ({ page }) => {
 	await page.getByRole('textbox', { name: "What's this article about?" }).fill(`Test about ${hash}`);
 	await page.getByRole('textbox', { name: 'Write your article (in markdown)' }).fill(`Test description ${hash}`);
 	await page.getByRole('button', { name: 'Publish Article' }).click();
-	const articleResponse = await page.waitForResponse('https://conduit-api.bondaracademy.com/api/articles/');
+	const articleResponse = await page.waitForResponse(`${process.env.API_URL}/api/articles/`);
 	const articleResponseBody = await articleResponse.json();
 	slugValue = articleResponseBody.article.slug;
 	await expect(page.locator('.article-page h1')).toContainText(`Test title ${hash}`);

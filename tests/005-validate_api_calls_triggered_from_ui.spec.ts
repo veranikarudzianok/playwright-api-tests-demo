@@ -9,7 +9,7 @@ test('Validate API call triggered by UI action', async ({ page }) => {
 	slugValue = await createArticleAPI(articles.article2);
 
 	// open a website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 
 	// set up a listener for the expected request
@@ -23,7 +23,7 @@ test('Validate API call triggered by UI action', async ({ page }) => {
 	await page.locator('app-favorite-button button').first().click();
 
 	// validate expected response
-	const articleResponse = await page.waitForResponse('*/**/favorite');
+	const articleResponse = await page.waitForResponse(/\/favorite/); 
 	const articleResponseBody = await articleResponse.json();
 	const favourited = articleResponseBody.article.favorited;
 	expect(favourited).toBeTruthy();

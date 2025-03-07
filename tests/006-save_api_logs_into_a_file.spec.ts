@@ -24,7 +24,7 @@ test('Save API logs to a file', async ({ page }) => {
 	});
 
 	// open a website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('networkidle', { timeout: 60000 });
 
 	// save logs to a file

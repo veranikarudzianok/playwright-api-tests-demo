@@ -5,7 +5,7 @@ export async function createArticleAPI(postdata: any) {
 	const options = {
 		data: postdata,
 	};
-	const postResponse = await apiContext.post('https://conduit-api.bondaracademy.com/api/articles/', options);
+	const postResponse = await apiContext.post(`${process.env.API_URL}/api/articles/`, options);
 	expect(postResponse.status()).toEqual(201);
 	const postResponseBody = await postResponse.json();
 	const slugValue = postResponseBody.article.slug;
@@ -14,7 +14,7 @@ export async function createArticleAPI(postdata: any) {
 
 export async function deleteArticleAPI(slugValue: string) {
 	const apiContext: APIRequestContext = await request.newContext();
-	const deleteResponse = await apiContext.delete(`https://conduit-api.bondaracademy.com/api/articles/${slugValue}`);
+	const deleteResponse = await apiContext.delete(`${process.env.API_URL}/api/articles/${slugValue}`);
 	expect(deleteResponse.status()).toEqual(204);
 }
 

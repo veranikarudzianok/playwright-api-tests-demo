@@ -11,8 +11,9 @@ test('Get Time to First Byte (TTFB) for /api/articles', async ({ page }) => {
 	});
 
 	// visit the page
-	await page.goto('https://conduit.bondaracademy.com/', { timeout: 60000 });
+	await page.goto('/', { timeout: 60000 });
 
 	// wait for the response explicitly
-	await page.waitForResponse((response) => response.url().includes('/api/articles'));
+	const responseToListen =  page.waitForResponse(/\/api\/articles/);
+	await responseToListen;
 });

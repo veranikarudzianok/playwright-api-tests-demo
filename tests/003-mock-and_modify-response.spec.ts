@@ -22,7 +22,7 @@ test.beforeEach(async ({ page }) => {
 	});
 
 	// go to website to trigger requests
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 });
 

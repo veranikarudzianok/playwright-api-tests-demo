@@ -7,6 +7,7 @@ export default defineConfig({
 	workers: 1,
 	reporter: 'html',
 	use: {
+		baseURL: 'https://conduit.bondaracademy.com',
 		trace: 'on-first-retry',
 		extraHTTPHeaders: {
 			Authorization: `Token ${process.env.ACCESS_TOKEN}`,

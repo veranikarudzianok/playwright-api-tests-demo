@@ -9,7 +9,7 @@ test('Validate API call triggered by UI action', async ({ page }) => {
 	slugValue = await createArticleAPI(articles.article2);
 
 	// open a website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 
 	// set up a listener for the expected request

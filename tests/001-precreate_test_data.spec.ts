@@ -11,7 +11,7 @@ test.beforeEach(async () => {
 
 test('Delete an article', async ({ page }) => {
 	// open website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 
 	// delete article

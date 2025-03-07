@@ -9,7 +9,7 @@
         "username": "veranika.rudzianok",
         "bio": "veranika rudzianok bio",
         "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMTA2N30sImlhdCI6MTc0MDQ5OTI0MSwiZXhwIjoxNzQ1NjgzMjQxfQ.k7MQSP5NlqFqToYXaaT1FQ0Ye6oTqEy0ONkSP5GYZek"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMTA2N30sImlhdCI6MTc0MTM0NjYyNywiZXhwIjoxNzQ2NTMwNjI3fQ.cuXIJ3nEOMCtUK69ZELttrb2Ea6tPFowklx5ezySbng"
       }
     }
   },
@@ -23,8 +23,8 @@
         "Coding",
         "Git",
         "Enroll",
-        "Bondar Academy",
         "Zoom",
+        "Bondar Academy",
         "qa career",
         "YouTube",
         "Exam"
@@ -50,7 +50,7 @@
           "createdAt": "2024-01-27T21:52:32.682Z",
           "updatedAt": "2024-01-27T21:52:32.682Z",
           "favorited": true,
-          "favoritesCount": 545,
+          "favoritesCount": 563,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -71,7 +71,7 @@
           "createdAt": "2024-01-27T21:50:38.825Z",
           "updatedAt": "2024-01-27T21:50:38.825Z",
           "favorited": false,
-          "favoritesCount": 204,
+          "favoritesCount": 210,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -92,7 +92,7 @@
           "createdAt": "2024-01-27T21:48:36.340Z",
           "updatedAt": "2024-01-27T21:48:36.340Z",
           "favorited": false,
-          "favoritesCount": 49,
+          "favoritesCount": 50,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -114,7 +114,7 @@
           "createdAt": "2024-01-27T21:46:09.512Z",
           "updatedAt": "2024-01-27T21:46:09.512Z",
           "favorited": false,
-          "favoritesCount": 28,
+          "favoritesCount": 29,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -135,7 +135,7 @@
           "createdAt": "2024-01-27T21:42:31.491Z",
           "updatedAt": "2024-01-27T21:42:31.491Z",
           "favorited": false,
-          "favoritesCount": 23,
+          "favoritesCount": 24,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -155,7 +155,7 @@
           "createdAt": "2024-01-27T21:39:50.587Z",
           "updatedAt": "2024-01-27T21:39:50.587Z",
           "favorited": false,
-          "favoritesCount": 16,
+          "favoritesCount": 18,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -176,7 +176,7 @@
           "createdAt": "2024-01-27T21:38:27.992Z",
           "updatedAt": "2024-01-27T21:38:27.992Z",
           "favorited": false,
-          "favoritesCount": 18,
+          "favoritesCount": 19,
           "author": {
             "username": "Artem Bondar",
             "bio": null,
@@ -234,7 +234,7 @@
           "createdAt": "2024-01-27T21:32:21.056Z",
           "updatedAt": "2024-01-27T21:32:21.056Z",
           "favorited": false,
-          "favoritesCount": 17,
+          "favoritesCount": 18,
           "author": {
             "username": "Artem Bondar",
             "bio": null,

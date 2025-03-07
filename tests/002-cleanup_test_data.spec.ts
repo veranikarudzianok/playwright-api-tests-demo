@@ -6,7 +6,7 @@ const hash = generateHash();
 
 test('Create an article', async ({ page }) => {
 	// open website
-	await page.goto('https://conduit.bondaracademy.com/');
+	await page.goto('/');
 	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
 
 	// publish an article

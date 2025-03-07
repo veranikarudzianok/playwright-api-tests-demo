@@ -23,12 +23,10 @@ test.beforeEach(async ({ page }) => {
 
 	// go to website to trigger requests
 	await page.goto('/');
-	await page.waitForLoadState('domcontentloaded', { timeout: 60000 });
+	await page.waitForLoadState('networkidle', { timeout: 60000 });
 });
 
 test('Validate modified data on UI', async ({ page }) => {
-	await page.waitForTimeout(1000);
-
 	// validate tags
 	const tagsOnUi = await page.locator('.sidebar .tag-list a').allTextContents();
 	const cleanedTagsOnUi = tagsOnUi.map((tag) => tag.trim());
@@ -38,5 +36,5 @@ test('Validate modified data on UI', async ({ page }) => {
 	await expect(page.locator('app-article-preview h1').first()).toContainText('This is a modified title');
 	await expect(page.locator('app-article-preview p').first()).toContainText('This is a modified description');
 
-	await page.unrouteAll({ behavior: 'ignoreErrors' });
+	await page.unrouteAll({ behavior: 'ignoreErrors' }); // optional line, might be useful to clean up active routes for the next tests (if any added)
 });
